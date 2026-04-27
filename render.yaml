@@ -3,7 +3,7 @@ services:
     name: nexus-downloader
     runtime: node
     plan: free
-    buildCommand: npm install && pip install yt-dlp gallery-dl
+    buildCommand: npm install && npx puppeteer browsers install chrome && pip install yt-dlp gallery-dl
     startCommand: npm start
     autoDeploy: true
     healthCheckPath: /health
@@ -16,7 +16,5 @@ services:
         value: memory
       - key: PUBLIC_MODE
         value: true
-      - key: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD
-        value: false
       - key: PUPPETEER_CACHE_DIR
         value: /opt/render/project/src/.cache/puppeteer

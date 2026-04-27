@@ -12,23 +12,25 @@ function defaultWritableDir(name) {
   return `./${name}`;
 }
 
-// Function to find Chromium path dynamically
+// Function to find Chromium/Chrome path dynamically
 function findChromiumPath() {
+  const renderChromePath = '/opt/render/project/src/.cache/puppeteer/chrome';
+  
   const paths = [
     process.env.PUPPETEER_EXECUTABLE_PATH,
+    // Check for Chrome installed via npx puppeteer browsers install chrome
+    // The path structure can vary, so we look for the executable
+    path.join(rootDir, '.cache/puppeteer/chrome/linux-147.0.7727.57/chrome-linux64/chrome'),
     '/usr/bin/chromium',
-    '/usr/bin/chromium-browser',
-    '/usr/bin/google-chrome',
-    '/app/.apt/usr/bin/google-chrome' // Common for some PaaS
+    '/usr/bin/google-chrome'
   ];
 
   for (const p of paths) {
     if (p && fs.existsSync(p)) return p;
   }
-  return null; // Let Puppeteer decide if not found
+  return null; 
 }
 
-// Hardcoded configuration with dynamic Chromium detection
 const config = {
   rootDir,
   env: process.env.NODE_ENV || 'production',
