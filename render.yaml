@@ -1,8 +1,10 @@
 services:
   - type: web
-    name: media-downloader-api
-    runtime: docker
+    name: nexus-downloader
+    runtime: node
     plan: free
+    buildCommand: npm install && pip install yt-dlp gallery-dl
+    startCommand: npm start
     autoDeploy: true
     healthCheckPath: /health
     envVars:
@@ -13,22 +15,10 @@ services:
       - key: QUEUE_BACKEND
         value: memory
       - key: FILE_EXPIRE_MINUTES
-        value: 10
+        value: 30
       - key: SENT_FILE_EXPIRE_SECONDS
         value: 60
       - key: DOWNLOAD_CONCURRENCY
-        value: 8
-      - key: TG_USER_DELAY_SECONDS
-        value: 4
-      - key: PUPPETEER_SKIP_DOWNLOAD
-        value: true
-      - key: PUPPETEER_EXECUTABLE_PATH
-        value: /usr/bin/chromium
-      - key: API_KEY
-        sync: false
-      - key: TG_BOT_TOKEN
-        sync: false
-      - key: TG_OWNER_IDS
-        sync: false
-      - key: TG_PUBLIC_ACCESS
+        value: 5
+      - key: PUBLIC_MODE
         value: true

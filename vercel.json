@@ -1,23 +1,47 @@
 {
   "version": 2,
-  "functions": {
-    "api/index.js": {
-      "maxDuration": 60
-    }
-  },
-  "rewrites": [
+  "name": "nexus-downloader",
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/api/index.js"
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/dashboard/(.*)",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/health",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/resolve",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/download",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/status/(.*)",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/file/(.*)",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.js"
     }
   ],
   "env": {
     "NODE_ENV": "production",
     "QUEUE_BACKEND": "memory",
-    "DOWNLOAD_DIR": "/tmp/media-downloader-downloads",
-    "LOG_DIR": "/tmp/media-downloader-logs",
-    "FILE_EXPIRE_MINUTES": "5",
-    "SENT_FILE_EXPIRE_SECONDS": "30",
-    "TG_BOT_ENABLED": "false"
+    "DOWNLOAD_DIR": "/tmp",
+    "LOG_DIR": "/tmp",
+    "PUBLIC_MODE": "true"
   }
 }
