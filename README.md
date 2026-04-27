@@ -1,75 +1,104 @@
-# 🚀 Nexus Downloader
+<div align="center">
 
-Nexus Downloader is a high-performance, production-ready media downloader API built with Node.js and Express. It utilizes a hybrid engine chain to ensure maximum compatibility and speed across 1000+ platforms including YouTube, TikTok, Instagram, CapCut, Reddit, and more.
+# 🚀 NEXUS DOWNLOADER
+### Crafted with ❤️ by [IRFAN](https://github.com/Irfan430)
 
-## ✨ Features
+[![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge&logo=statuspage)](https://github.com/Irfan430/Nexus-Downloader)
+[![Node](https://img.shields.io/badge/Node.js-v18+-blue?style=for-the-badge&logo=nodedotjs)](https://nodejs.org)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&logo=opensourceinitiative)](LICENSE)
+[![Platform](https://img.shields.io/badge/Platform-1000+-brightgreen?style=for-the-badge&logo=googleplay)](https://github.com/Irfan430/Nexus-Downloader)
 
-- **Hybrid Engine Chain**: Automatically switches between Cobalt, `yt-dlp`, `gallery-dl`, and Puppeteer for the best results.
-- **Modern Dashboard**: A sleek, responsive web interface for easy media fetching and management.
-- **Queue Management**: Built-in support for Bull + Redis for robust job handling, with an in-memory fallback for local development.
-- **Telegram Bot Integration**: Optional Telegram bot support for downloading media directly within the app.
-- **Smart Cleanup**: Automated daemon for removing expired files and metadata to save storage.
-- **Public API**: Well-documented endpoints for integration with other services.
+---
 
-## 🛠️ Quick Start
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
 
-### Prerequisites
+## 🌟 Premium Features
 
-- Node.js (v16+)
-- Python 3 (for `yt-dlp` and `gallery-dl`)
-- Redis (optional, for production queue)
+<table>
+  <tr>
+    <td width="50%">
+      <h3>⚡ Ultra Fast Engine</h3>
+      <p>Utilizes a multi-threaded hybrid engine chain (Cobalt + yt-dlp + Puppeteer) for lightning-fast media extraction.</p>
+    </td>
+    <td width="50%">
+      <h3>🎨 Advanced 3D UI</h3>
+      <p>A sleek, modern dashboard with 3D glassmorphism effects, floating blobs, and a responsive design.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🤖 Smart Automation</h3>
+      <p>Automated cleanup daemon, intelligent queue management, and optional Telegram bot integration.</p>
+    </td>
+    <td width="50%">
+      <h3>🌍 Universal Support</h3>
+      <p>Download from YouTube, TikTok, Instagram, CapCut, Reddit, Twitter, and 1000+ other platforms.</p>
+    </td>
+  </tr>
+</table>
 
-### Installation
+---
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Irfan430/Nexus-Downloader.git
-   cd Nexus-Downloader
-   ```
+## 🛠️ Tech Stack
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   pip install yt-dlp gallery-dl
-   ```
+<p align="left">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+</p>
 
-3. **Configure environment:**
-   ```bash
-   cp .env.example .env
-   # Edit .env with your configuration
-   ```
+---
 
-4. **Start the server:**
-   ```bash
-   npm start
-   ```
+## 🚀 Quick Installation
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Irfan430/Nexus-Downloader.git
+cd Nexus-Downloader
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+pip install yt-dlp gallery-dl
+```
+
+### 3. Start the Engine
+```bash
+npm start
+```
+> **Note:** No `.env` file is required! All configurations are pre-set in `src/config.js` for a seamless experience.
+
+---
 
 ## 📡 API Endpoints
 
-| Endpoint | Method | Description |
+| Method | Endpoint | Description |
 | :--- | :--- | :--- |
-| `/health` | GET | Check system health status |
-| `/dashboard` | GET | Access the web dashboard |
-| `/resolve` | GET | Resolve media URL to metadata |
-| `/download` | POST | Start a new download job |
-| `/status/:jobId` | GET | Check status of a specific job |
-| `/file/:jobId` | GET | Download the completed file |
-
-## 🖥️ Dashboard
-
-The dashboard is available at `http://localhost:$PORT/dashboard`. It provides a user-friendly way to:
-- Paste and fetch media links.
-- Choose from available qualities and formats.
-- Monitor active and recent download jobs.
-- View system metrics and engine status.
-
-## 🤖 Telegram Bot
-
-To enable the Telegram bot, set `TG_BOT_ENABLED=true` and provide your `TG_BOT_TOKEN` in the `.env` file. The bot supports both private and public modes.
-
-## 📄 License
-
-This project is licensed under the MIT License.
+| `GET` | `/health` | System health check |
+| `GET` | `/dashboard` | Access the 3D Dashboard |
+| `GET` | `/resolve` | Get media metadata |
+| `POST` | `/download` | Initiate download |
 
 ---
-Built with ❤️ by [Irfan430](https://github.com/Irfan430)
+
+## 👤 Author
+
+**IRFAN**
+- Github: [@Irfan430](https://github.com/Irfan430)
+- Project: Nexus Downloader
+
+---
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
+
+<p align="center">
+  Built with ❤️ by IRFAN
+</p>
+
+</div>
