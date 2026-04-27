@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["nodejs_20", "python311", "ffmpeg", "yt-dlp", "chromium", "aria2"]
+
+[phases.install]
+cmds = ["npm install", "pip install gallery-dl"]
+
+[start]
+cmd = "npm start"

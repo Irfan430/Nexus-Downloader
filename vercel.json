@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/index.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "QUEUE_BACKEND": "memory",
+    "DOWNLOAD_DIR": "/tmp/media-downloader-downloads",
+    "LOG_DIR": "/tmp/media-downloader-logs",
+    "FILE_EXPIRE_MINUTES": "5",
+    "SENT_FILE_EXPIRE_SECONDS": "30",
+    "TG_BOT_ENABLED": "false"
+  }
+}

@@ -1,0 +1,28 @@
+
+> media-downloader-api@1.0.0 start
+> node src/index.js
+
+Media Downloader API listening on http://127.0.0.1:3002
+(node:53330) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Media Downloader API listening on http://127.0.0.1:3002
+(node:61065) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Media Downloader API listening on http://127.0.0.1:3003
+(node:12959) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Media Downloader API listening on http://127.0.0.1:3003
+(node:13809) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Media Downloader API listening on http://127.0.0.1:3003
+(node:14361) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Media Downloader API listening on http://127.0.0.1:3003
+(node:46310) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Media Downloader API listening on http://127.0.0.1:3003
+(node:47615) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Media Downloader API listening on http://127.0.0.1:3003
+(node:49200) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)

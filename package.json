@@ -1,0 +1,39 @@
+{
+  "name": "media-downloader-api",
+  "version": "1.0.0",
+  "description": "Production-grade Universal Media Downloader API with Cobalt, yt-dlp, gallery-dl, and Puppeteer fallback engines.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "daemon:start": "node scripts/daemon.js start",
+    "daemon:stop": "node scripts/daemon.js stop",
+    "daemon:status": "node scripts/daemon.js status",
+    "dev": "nodemon src/index.js",
+    "test": "node tests/test.js",
+    "lint": "node --check src/index.js && node --check api/index.js && node --check scripts/daemon.js && node --check src/services/chatbotFlow.js && node --check tests/test.js && node --check tests/chatbot-flow.test.js && node --check tests/public-bot-hardening.test.js && node --check tests/daemon-upgrade.test.js && node --check tests/info-fallback.test.js && node --check tests/resolver-normalize.test.js && node --check tests/telegram-bot.test.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "bull": "^4.16.5",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "fluent-ffmpeg": "^2.1.2",
+    "helmet": "^7.1.0",
+    "ioredis": "^5.3.2",
+    "morgan": "^1.10.0",
+    "node-cron": "^4.2.1",
+    "puppeteer": "^24.42.0",
+    "telegraf": "^4.16.3",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "license": "UNLICENSED"
+}
