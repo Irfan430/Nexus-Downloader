@@ -14,11 +14,9 @@ services:
         value: 3000
       - key: QUEUE_BACKEND
         value: memory
-      - key: FILE_EXPIRE_MINUTES
-        value: 30
-      - key: SENT_FILE_EXPIRE_SECONDS
-        value: 60
-      - key: DOWNLOAD_CONCURRENCY
-        value: 5
       - key: PUBLIC_MODE
         value: true
+      - key: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD
+        value: false
+      - key: PUPPETEER_CACHE_DIR
+        value: /opt/render/project/src/.cache/puppeteer
