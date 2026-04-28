@@ -59,7 +59,7 @@ const config = {
   publicMode: true,
   telegram: {
     enabled: true,
-    token: '8140462013:AAH_v5_v5_v5_v5_v5_v5_v5_v5',
+    token: '8140462013:AAEojO-aBUvetf8ERoWfs33jfa9IXq8OxeM',
     publicAccess: true,
     userDelaySeconds: 2,
     ownerIds: []
