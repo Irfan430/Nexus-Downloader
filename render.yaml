@@ -1,12 +1,12 @@
 services:
   - type: web
-    name: nexus-downloader
-    runtime: node
+    name: media-downloader-api
+    runtime: image
     plan: free
-    buildCommand: npm install && npx puppeteer browsers install chrome && pip install yt-dlp gallery-dl
-    startCommand: npm start
     autoDeploy: true
     healthCheckPath: /health
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
     envVars:
       - key: NODE_ENV
         value: production
@@ -14,7 +14,29 @@ services:
         value: 3000
       - key: QUEUE_BACKEND
         value: memory
-      - key: PUBLIC_MODE
-        value: true
+      - key: DOWNLOAD_DIR
+        value: /tmp/downloads
+      - key: LOG_DIR
+        value: /tmp/logs
+      - key: FILE_EXPIRE_MINUTES
+        value: 10
+      - key: SENT_FILE_EXPIRE_SECONDS
+        value: 60
+      - key: DOWNLOAD_CONCURRENCY
+        value: 4
+      - key: TG_USER_DELAY_SECONDS
+        value: 4
+      - key: PUPPETEER_SKIP_DOWNLOAD
+        value: "true"
+      - key: PUPPETEER_EXECUTABLE_PATH
+        value: /usr/bin/chromium
       - key: PUPPETEER_CACHE_DIR
-        value: /opt/render/project/src/.cache/puppeteer
+        value: /tmp/.puppeteer-cache
+      - key: API_KEY
+        sync: false
+      - key: TG_BOT_TOKEN
+        sync: false
+      - key: TG_OWNER_IDS
+        sync: false
+      - key: TG_PUBLIC_ACCESS
+        value: "true"
