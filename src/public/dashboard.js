@@ -79,8 +79,8 @@ function logActivity(message, level = 'info') {
   const item = document.createElement('div');
   item.className = level;
   item.textContent = `${new Date().toLocaleTimeString()}  ${message}`;
-  els.activity.prepend(item);
-  while (els.activity.children.length > 60) els.activity.lastElementChild.remove();
+  els.jobs.prepend(item);
+  while (els.jobs.children.length > 60) els.jobs.lastElementChild.remove();
 }
 
 async function request(path, options = {}) {
@@ -447,7 +447,7 @@ els.refreshBtn.addEventListener('click', () => {
 });
 
 els.clearActivityBtn.addEventListener('click', () => {
-  els.activity.innerHTML = '';
+  els.jobs.innerHTML = '';
 });
 
 refresh();
