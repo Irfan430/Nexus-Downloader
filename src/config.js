@@ -62,7 +62,7 @@ const config = {
     token: '8140462013:AAEojO-aBUvetf8ERoWfs33jfa9IXq8OxeM',
     publicAccess: true,
     userDelaySeconds: 2,
-    ownerIds: []
+    ownerIds: [7429947930]
   }
 };
 
